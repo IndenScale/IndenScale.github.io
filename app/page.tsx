@@ -10,20 +10,6 @@ const sections = [
   { slug: 'projects', title: '项目', desc: '问题 → 分析 → 方案 → 效果' },
 ] as const;
 
-const sectionColors: Record<string, string> = {
-  bim: 'from-amber-500/20 to-orange-500/5',
-  ops: 'from-emerald-500/20 to-teal-500/5',
-  architecture: 'from-violet-500/20 to-purple-500/5',
-  projects: 'from-sky-500/20 to-blue-500/5',
-};
-
-const sectionAccent: Record<string, string> = {
-  bim: 'text-amber-600 dark:text-amber-400',
-  ops: 'text-emerald-600 dark:text-emerald-400',
-  architecture: 'text-violet-600 dark:text-violet-400',
-  projects: 'text-sky-600 dark:text-sky-400',
-};
-
 export default function Home() {
   const recent = getRecentArticles(6);
 
@@ -31,7 +17,7 @@ export default function Home() {
     <main className="max-w-3xl mx-auto px-6 py-12">
       {/* Hero */}
       <section className="mb-16 space-y-4">
-        <h1 className="text-4xl font-bold tracking-tight bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent">
+        <h1 className="text-4xl font-bold tracking-tight">
           宋涤非
         </h1>
         <p className="text-muted-foreground leading-relaxed max-w-xl text-base">
@@ -61,10 +47,9 @@ export default function Home() {
             return (
               <Link key={slug} href={`/${slug}`} className="block">
                 <GlowCard className="h-full p-5">
-                  <div className={`absolute inset-0 bg-gradient-to-br ${sectionColors[slug]} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
                   <div className="relative z-10">
                     <div className="flex items-center justify-between mb-2">
-                      <h2 className={`font-semibold transition-colors ${sectionAccent[slug]}`}>
+                      <h2 className="font-semibold text-foreground">
                         {title}
                       </h2>
                       <ArrowRight className="h-4 w-4 text-muted-foreground opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
@@ -85,20 +70,17 @@ export default function Home() {
       {/* Recent Articles */}
       {recent.length > 0 && (
         <section>
-          <h2 className="text-lg font-semibold mb-6 flex items-center gap-2">
-            <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-            最近更新
-          </h2>
+          <h2 className="text-lg font-semibold mb-6">最近更新</h2>
           <div className="space-y-3">
             {recent.map((article) => (
               <article key={`${article.section}/${article.slug}`}>
                 <Link href={`/${article.section}/${article.slug}`} className="block">
                   <GlowCard className="p-4">
                     <div className="flex items-start gap-3">
-                      <div className={`mt-1 h-2 w-2 rounded-full shrink-0 ${sectionAccent[article.section].replace('text-', 'bg-')}`} />
+                      <div className="mt-1.5 h-1.5 w-1.5 rounded-full bg-primary shrink-0" />
                       <div className="min-w-0 flex-1">
                         <div className="flex items-center gap-3 text-xs text-muted-foreground mb-1">
-                          <span className={`font-medium ${sectionAccent[article.section]}`}>
+                          <span className="font-medium text-foreground">
                             {sections.find(s => s.slug === article.section)?.title}
                           </span>
                           {article.date && (

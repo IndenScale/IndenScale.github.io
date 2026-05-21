@@ -133,18 +133,19 @@
   background: var(--card);
 }
 
+/* 辉光层：conic-gradient 旋转边框 */
 .glow-card::before {
   content: "";
   position: absolute;
-  inset: -1px;
-  border-radius: calc(var(--radius-xl) + 1px);
+  inset: -2px;
+  border-radius: calc(var(--radius-xl) + 2px);
   background: conic-gradient(
     from var(--glow-angle, 0deg),
     transparent 0%,
-    var(--primary) 15%,
-    var(--ring) 30%,
-    var(--primary) 45%,
-    transparent 60%,
+    var(--primary) 10%,
+    var(--ring) 25%,
+    var(--primary) 40%,
+    transparent 55%,
     transparent 100%
   );
   opacity: 0;
@@ -154,42 +155,17 @@
 }
 
 .glow-card:hover::before {
-  opacity: 0.6;
-  animation: glow-rotate 3s linear infinite;
+  opacity: 1;
 }
 
-.glow-card::after {
-  content: "";
+/* 内层遮挡：遮住中间，只留 2px 边框 */
+.glow-card .glow-inner {
   position: absolute;
-  inset: 1px;
+  inset: 2px;
   border-radius: var(--radius-xl);
   background: var(--card);
   z-index: 1;
   pointer-events: none;
-}
-
-@property --glow-angle {
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
-}
-
-@keyframes glow-rotate {
-  0% {
-    --glow-angle: 0deg;
-  }
-  100% {
-    --glow-angle: 360deg;
-  }
-}
-
-/* ─── Subtle ambient glow for section cards on hover ─── */
-.glow-card .glow-border {
-  background: radial-gradient(
-    600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-    var(--primary) / 8%,
-    transparent 40%
-  );
 }
 
 /* ─── Prose styles for markdown content ─── */

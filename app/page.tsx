@@ -1,102 +1,80 @@
-import { getAllPosts } from "@/lib/posts";
 import Link from "next/link";
+import { getArticles, getSectionIndex, getRecentArticles } from "@/lib/content";
+
+const sections = [
+  { slug: 'bim', title: 'Make BIM Great Again', desc: '施工管理的计算化' },
+  { slug: 'ops', title: '运营工业化', desc: '企业现实与 Agent 工程的接口' },
+  { slug: 'architecture', title: 'Agent 架构', desc: 'Harness 的控制切面' },
+  { slug: 'projects', title: '项目', desc: '问题 → 分析 → 方案 → 效果' },
+] as const;
 
 export default function Home() {
-  const posts = getAllPosts();
+  const recent = getRecentArticles(6);
 
   return (
-    <main className="max-w-4xl mx-auto px-6 py-16">
-      {/* Hero Section */}
-      <section className="mb-20">
-        <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
-          宋涤非
-        </h1>
-        <p className="text-xl text-muted-foreground mb-8 max-w-2xl">
-          软件工程、智能体 (AI Agents)、网络安全、领域建模
+    <main className="max-w-3xl mx-auto px-6 py-12">
+      <section className="mb-16 space-y-4">
+        <h1 className="text-3xl font-bold tracking-tight">宋涤非</h1>
+        <p className="text-muted-foreground leading-relaxed max-w-xl">
+          Agent 基础设施工程师。目前在传统企业数字化转型部门构建 Agent Runtime 与可观测性体系。
+          这里记录我对四个问题的思考与实践。
         </p>
-        <div className="flex flex-wrap gap-4 text-sm">
-          <a 
-            href="https://github.com/IndenScale" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-muted-foreground hover:text-foreground transition-colors"
-          >
-            GitHub →
-          </a>
-          <a 
-            href="https://github.com/IndenScale/agenthooks" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-muted-foreground hover:text-foreground transition-colors"
-          >
-            AgentHooks →
-          </a>
-          <a 
-            href="https://github.com/IndenScale/monoco-toolkit" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-muted-foreground hover:text-foreground transition-colors"
-          >
-            Monoco →
-          </a>
-          <a 
-            href="https://github.com/IndenScale/Typedown" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-muted-foreground hover:text-foreground transition-colors"
-          >
-            Typedown →
-          </a>
+        <div className="flex gap-4 text-sm">
+          <a href="https://github.com/IndenScale" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">GitHub</a>
         </div>
       </section>
 
-      {/* Latest Posts */}
-      <section>
-        <div className="flex items-center justify-between mb-8">
-          <h2 className="text-2xl font-semibold tracking-tight">最新文章</h2>
-          <Link 
-            href="/posts" 
-            className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-          >
-            查看全部 →
-          </Link>
+      <section className="mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {sections.map(({ slug, title, desc }) => {
+            const articles = getArticles(slug);
+            return (
+              <Link
+                key={slug}
+                href={`/${slug}`}
+                className="group p-5 rounded-lg border border-border hover:border-foreground/20 hover:shadow-sm transition-all"
+              >
+                <h2 className="font-semibold group-hover:text-muted-foreground transition-colors">
+                  {title}
+                </h2>
+                <p className="text-sm text-muted-foreground mt-1">{desc}</p>
+                <p className="text-xs text-muted-foreground mt-3">
+                  {articles.length} 篇文章
+                </p>
+              </Link>
+            );
+          })}
         </div>
-        
-        {posts.length === 0 ? (
-          <p className="text-muted-foreground">暂无文章</p>
-        ) : (
-          <div className="space-y-8">
-            {posts.slice(0, 5).map((post) => (
-              <article key={post.slug} className="group">
-                <Link href={`/posts/${post.slug}`}>
-                  <div className="space-y-2">
+      </section>
+
+      {recent.length > 0 && (
+        <section>
+          <h2 className="text-lg font-semibold mb-6">最近更新</h2>
+          <div className="space-y-4">
+            {recent.map((article) => (
+              <article key={`${article.section}/${article.slug}`} className="group">
+                <Link href={`/${article.section}/${article.slug}`}>
+                  <div className="space-y-1 py-2">
                     <div className="flex items-center gap-3 text-sm text-muted-foreground">
-                      <time dateTime={post.date}>
-                        {new Date(post.date).toLocaleDateString('zh-CN', {
-                          year: 'numeric',
-                          month: 'long',
-                          day: 'numeric',
-                        })}
-                      </time>
-                      {post.tags.length > 0 && (
-                        <>
-                          <span>·</span>
-                          <div className="flex gap-2">
-                            {post.tags.slice(0, 3).map((tag) => (
-                              <span key={tag} className="hover:text-foreground">
-                                #{tag}
-                              </span>
-                            ))}
-                          </div>
-                        </>
+                      <span className="text-xs px-2 py-0.5 rounded bg-muted">
+                        {sections.find(s => s.slug === article.section)?.title}
+                      </span>
+                      {article.date && (
+                        <time dateTime={article.date}>
+                          {new Date(article.date).toLocaleDateString("zh-CN", {
+                            year: "numeric",
+                            month: "short",
+                            day: "numeric",
+                          })}
+                        </time>
                       )}
                     </div>
-                    <h3 className="text-xl font-medium group-hover:text-muted-foreground transition-colors">
-                      {post.title}
+                    <h3 className="font-medium group-hover:text-muted-foreground transition-colors">
+                      {article.title}
                     </h3>
-                    {post.description && (
-                      <p className="text-muted-foreground line-clamp-2">
-                        {post.description}
+                    {article.description && (
+                      <p className="text-sm text-muted-foreground line-clamp-1">
+                        {article.description}
                       </p>
                     )}
                   </div>
@@ -104,8 +82,8 @@ export default function Home() {
               </article>
             ))}
           </div>
-        )}
-      </section>
+        </section>
+      )}
     </main>
   );
 }

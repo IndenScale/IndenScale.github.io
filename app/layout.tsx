@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "宋涤非 | IndenScale",
-  description: "软件工程、智能体、网络安全、领域建模",
+  description: "Agent 架构、运营工业化、施工管理计算化。记录思考与实践。",
 };
 
 export default function RootLayout({
@@ -28,21 +28,19 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}
       >
         <header className="border-b border-border">
-          <div className="max-w-4xl mx-auto px-6 py-4">
+          <div className="max-w-3xl mx-auto px-6 py-4">
             <nav className="flex items-center justify-between">
               <a href="/" className="text-xl font-bold tracking-tight">
                 IndenScale
               </a>
-              <div className="flex items-center gap-6 text-sm text-muted-foreground">
-                <a href="/" className="hover:text-foreground transition-colors">
-                  首页
-                </a>
-                <a href="/posts" className="hover:text-foreground transition-colors">
-                  文章
-                </a>
-                <a 
-                  href="https://github.com/IndenScale" 
-                  target="_blank" 
+              <div className="flex items-center gap-5 text-sm text-muted-foreground">
+                <a href="/bim" className="hover:text-foreground transition-colors">BIM</a>
+                <a href="/ops" className="hover:text-foreground transition-colors">运营工业化</a>
+                <a href="/architecture" className="hover:text-foreground transition-colors">架构</a>
+                <a href="/projects" className="hover:text-foreground transition-colors">项目</a>
+                <a
+                  href="https://github.com/IndenScale"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-foreground transition-colors"
                 >
@@ -54,8 +52,8 @@ export default function RootLayout({
         </header>
         {children}
         <footer className="border-t border-border mt-20">
-          <div className="max-w-4xl mx-auto px-6 py-8 text-sm text-muted-foreground text-center">
-            © 2026 宋涤非 (IndenScale). All rights reserved.
+          <div className="max-w-3xl mx-auto px-6 py-8 text-sm text-muted-foreground text-center">
+            © 2026 宋涤非 (IndenScale)
           </div>
         </footer>
       </body>

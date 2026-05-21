@@ -119,10 +119,69 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
-    @apply border-border outline-ring/50;
   }
   body {
     @apply bg-background text-foreground;
-    @apply bg-background text-foreground;
   }
+}
+
+/* Prose styles for markdown content */
+.prose {
+  @apply text-foreground;
+}
+
+.prose h1 {
+  @apply text-3xl font-bold tracking-tight mt-8 mb-4;
+}
+
+.prose h2 {
+  @apply text-2xl font-semibold tracking-tight mt-8 mb-4;
+}
+
+.prose h3 {
+  @apply text-xl font-semibold mt-6 mb-3;
+}
+
+.prose p {
+  @apply my-4 leading-relaxed;
+}
+
+.prose ul {
+  @apply list-disc pl-6 my-4 space-y-1;
+}
+
+.prose ol {
+  @apply list-decimal pl-6 my-4 space-y-1;
+}
+
+.prose li {
+  @apply my-1;
+}
+
+.prose a {
+  @apply text-foreground underline underline-offset-4 hover:text-muted-foreground transition-colors;
+}
+
+.prose blockquote {
+  @apply border-l-2 border-border pl-4 italic my-6 text-muted-foreground;
+}
+
+.prose code {
+  @apply px-1.5 py-0.5 rounded bg-muted text-sm font-mono;
+}
+
+.prose pre {
+  @apply p-4 rounded-lg bg-muted overflow-x-auto my-4;
+}
+
+.prose pre code {
+  @apply p-0 bg-transparent;
+}
+
+.prose hr {
+  @apply my-8 border-border;
+}
+
+.prose strong {
+  @apply font-semibold;
 }

@@ -1,0 +1,163 @@
+[2026-02-16T04:40:34Z] pre-session
+  Session ID: 2ebc0dc6-1dd2-49ab-9887-e24d592f6485
+  Work Dir: /Users/indenscale/Documents/Projects/IndenScale.github.io
+  Event Time: 2026-02-16T12:40:34.963767
+---
+[2026-02-16T04:56:56Z] session_end
+  Session ID: 2ebc0dc6-1dd2-49ab-9887-e24d592f6485
+  Work Dir: /Users/indenscale/Documents/Projects/IndenScale.github.io
+  Duration: 981s
+  Exit Reason: user_exit
+---
+[2026-02-16T04:56:59Z] pre-session
+  Session ID: df7ada16-17d8-4ac3-aeb9-e8422e99f703
+  Work Dir: /Users/indenscale/Documents/Projects/IndenScale.github.io
+  Event Time: 2026-02-16T12:56:59.079595
+---
+[2026-02-16T05:59:16Z] pre-session
+  Session ID: 2ebc0dc6-1dd2-49ab-9887-e24d592f6485
+  Work Dir: /Users/indenscale/Documents/Projects/IndenScale.github.io
+  Event Time: 2026-02-16T13:59:16.802008
+---
+[2026-02-16T06:03:40Z] pre-session
+  Session ID: b519d3e6-9daf-44c8-8f9a-bac74ee2dc60
+  Work Dir: /Users/indenscale/Documents/Projects/IndenScale.github.io
+  Event Time: 2026-02-16T14:03:40.680563
+---
+[2026-02-16T06:31:09Z] pre-session
+  Session ID: 6f7904f5-fada-4ebc-81b6-e27abcf587eb
+  Work Dir: /Users/indenscale/Documents/Projects/IndenScale.github.io
+  Event Time: 2026-02-16T14:31:09.780793
+---
+[2026-02-16T06:36:45Z] session_end
+  Session ID: 6f7904f5-fada-4ebc-81b6-e27abcf587eb
+  Work Dir: /Users/indenscale/Documents/Projects/IndenScale.github.io
+  Duration: 335s
+  Exit Reason: user_exit
+---
+[2026-02-17T03:41:01Z] pre-session
+  Session ID: 97db2f27-e93e-47db-8c39-11d817d04e85
+  Work Dir: /Users/indenscale/Documents/Projects/IndenScale.github.io
+  Event Time: 2026-02-17T11:41:01.193005
+---
+[2026-02-17T03:48:00Z] session_end
+  Session ID: 97db2f27-e93e-47db-8c39-11d817d04e85
+  Work Dir: /Users/indenscale/Documents/Projects/IndenScale.github.io
+  Duration: 418s
+  Exit Reason: user_exit
+---
+[2026-02-17T03:48:01Z] pre-session
+  Session ID: 2e15b6a6-d1d1-435c-b2d9-1ead19fb1d39
+  Work Dir: /Users/indenscale/Documents/Projects/IndenScale.github.io
+  Event Time: 2026-02-17T11:48:01.901066
+---
+[2026-02-17T04:09:25Z] session_end
+  Session ID: 2e15b6a6-d1d1-435c-b2d9-1ead19fb1d39
+  Work Dir: /Users/indenscale/Documents/Projects/IndenScale.github.io
+  Duration: 1283s
+  Exit Reason: user_exit
+---
+[2026-02-17T04:09:27Z] pre-session
+  Session ID: 74d13894-1fdf-4a6e-8a98-13d75d3ce308
+  Work Dir: /Users/indenscale/Documents/Projects/IndenScale.github.io
+  Event Time: 2026-02-17T12:09:27.283945
+---
+[2026-02-17T04:16:18Z] session_end
+  Session ID: 74d13894-1fdf-4a6e-8a98-13d75d3ce308
+  Work Dir: /Users/indenscale/Documents/Projects/IndenScale.github.io
+  Duration: 410s
+  Exit Reason: user_exit
+---
+[2026-02-17T04:16:19Z] pre-session
+  Session ID: 28c6d1e5-de90-4a32-b660-48ebac75ba33
+  Work Dir: /Users/indenscale/Documents/Projects/IndenScale.github.io
+  Event Time: 2026-02-17T12:16:19.739345
+---
+[2026-02-17T04:29:38Z] session_end
+  Session ID: 28c6d1e5-de90-4a32-b660-48ebac75ba33
+  Work Dir: /Users/indenscale/Documents/Projects/IndenScale.github.io
+  Duration: 798s
+  Exit Reason: user_exit
+---
+[2026-02-18T06:31:32Z] pre-session
+  Session ID: 5f38285c-c827-42ce-b518-78f0fe11a95e
+  Work Dir: /Users/indenscale/Documents/Projects/IndenScale.github.io
+  Event Time: 2026-02-18T14:31:32.577268
+---
+[2026-02-18T14:59:54Z] session_end
+  Session ID: 5f38285c-c827-42ce-b518-78f0fe11a95e
+  Work Dir: /Users/indenscale/Documents/Projects/IndenScale.github.io
+  Duration: 30499s
+  Exit Reason: user_exit
+---
+[2026-02-18T15:00:33Z] pre-session
+  Session ID: 02da510f-e195-4b7f-8e58-dbbc1de1756f
+  Work Dir: /Users/indenscale/Documents/Projects/IndenScale.github.io
+  Event Time: 2026-02-18T23:00:33.425687
+---
+[2026-02-18T15:49:40Z] session_end
+  Session ID: 02da510f-e195-4b7f-8e58-dbbc1de1756f
+  Work Dir: /Users/indenscale/Documents/Projects/IndenScale.github.io
+  Duration: 2947s
+  Exit Reason: user_exit
+---
+[2026-02-19T14:43:44Z] pre-session
+  Session ID: dfc16864-2c0f-4251-9664-ee834379f4e3
+  Work Dir: /Users/indenscale/Documents/Projects/IndenScale.github.io
+  Event Time: 2026-02-19T22:43:44.172784
+---
+[2026-02-19T15:22:17Z] session_end
+  Session ID: dfc16864-2c0f-4251-9664-ee834379f4e3
+  Work Dir: /Users/indenscale/Documents/Projects/IndenScale.github.io
+  Duration: 2313s
+  Exit Reason: user_exit
+---
+[2026-02-19T15:22:19Z] pre-session
+  Session ID: b1bf44c5-fd1f-4f37-8fb0-bbfb65501f15
+  Work Dir: /Users/indenscale/Documents/Projects/IndenScale.github.io
+  Event Time: 2026-02-19T23:22:19.485932
+---
+[2026-02-19T15:31:38Z] session_end
+  Session ID: b1bf44c5-fd1f-4f37-8fb0-bbfb65501f15
+  Work Dir: /Users/indenscale/Documents/Projects/IndenScale.github.io
+  Duration: 558s
+  Exit Reason: user_exit
+---
+[2026-02-19T15:31:39Z] pre-session
+  Session ID: 1e36cd14-23ce-4eb0-844f-e768dda60d8f
+  Work Dir: /Users/indenscale/Documents/Projects/IndenScale.github.io
+  Event Time: 2026-02-19T23:31:39.953582
+---
+[2026-02-19T22:02:14Z] session_end
+  Session ID: 1e36cd14-23ce-4eb0-844f-e768dda60d8f
+  Work Dir: /Users/indenscale/Documents/Projects/IndenScale.github.io
+  Duration: 23434s
+  Exit Reason: user_exit
+---
+[2026-02-19T22:02:16Z] pre-session
+  Session ID: d773dfa0-2db8-479d-ac73-fbfb3e99a3ec
+  Work Dir: /Users/indenscale/Documents/Projects/IndenScale.github.io
+  Event Time: 2026-02-20T06:02:16.272374
+---
+[2026-02-19T22:21:10Z] session_end
+  Session ID: d773dfa0-2db8-479d-ac73-fbfb3e99a3ec
+  Work Dir: /Users/indenscale/Documents/Projects/IndenScale.github.io
+  Duration: 1134s
+  Exit Reason: user_exit
+---
+[2026-02-19T22:29:12Z] pre-session
+  Session ID: 0ba02d4c-15fa-4205-94f6-398417c0c9a5
+  Work Dir: /Users/indenscale/Documents/Projects/IndenScale.github.io
+  Event Time: 2026-02-20T06:29:12.944107
+---
+[2026-02-19T23:05:13Z] pre-session
+  Session ID: d773dfa0-2db8-479d-ac73-fbfb3e99a3ec
+  Work Dir: /Users/indenscale/Documents/Projects/IndenScale.github.io
+  Event Time: 2026-02-20T07:05:13.145719
+---
+[2026-02-19T23:06:31Z] session_end
+  Session ID: d773dfa0-2db8-479d-ac73-fbfb3e99a3ec
+  Work Dir: /Users/indenscale/Documents/Projects/IndenScale.github.io
+  Duration: 78s
+  Exit Reason: user_exit
+---

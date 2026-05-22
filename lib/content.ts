@@ -94,6 +94,40 @@ function extractTitle(markdown: string): string | null {
   return match ? match[1].trim() : null;
 }
 
+export interface CodeBlock {
+  language: string;
+  code: string;
+}
+
+export function extractCodeBlocks(markdown: string): CodeBlock[] {
+  const regex = /```(\w*)\n([\s\S]*?)```/g;
+  const blocks: CodeBlock[] = [];
+  let match;
+  while ((match = regex.exec(markdown)) !== null) {
+    blocks.push({ language: match[1] || '', code: match[2].trimEnd() });
+  }
+  return blocks;
+}
+
+export function extractFirstCodeBlock(section: string, slug: string, language?: string, maxLines?: number): CodeBlock | null {
+  const article = getArticle(section, slug);
+  if (!article) return null;
+  const blocks = extractCodeBlocks(article.content);
+  let block = language
+    ? blocks.find(b => b.language === language) || null
+    : blocks[0] || null;
+  if (block && maxLines) {
+    const lines = block.code.split('\n');
+    if (lines.length > maxLines) {
+      block = {
+        ...block,
+        code: lines.slice(0, maxLines).join('\n') + '\n...',
+      };
+    }
+  }
+  return block;
+}
+
 export function getExcerpt(content: string, maxLength: number = 120): string {
   const plainText = content
     .replace(/#+ /g, '')

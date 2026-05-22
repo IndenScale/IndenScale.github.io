@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getArticle, getArticles, getSectionTitle } from "@/lib/content";
 import { remark } from "remark";
 import html from "remark-html";
+import { BackgroundBlobs } from "../../components/BackgroundBlobs";
 
 interface Props {
   params: Promise<{ section: string; slug: string }>;
@@ -17,7 +18,6 @@ export async function generateStaticParams() {
       params.push({ section, slug: article.slug });
     }
   }
-  // Add index pages
   for (const section of validSections) {
     params.push({ section, slug: 'index' });
   }
@@ -45,6 +45,7 @@ export default async function ArticlePage({ params }: Props) {
 
   return (
     <main className="max-w-3xl mx-auto px-6 py-12">
+      <BackgroundBlobs />
       <Link
         href={`/${section}`}
         className="text-sm text-muted-foreground hover:text-foreground transition-colors mb-8 inline-block"
@@ -53,7 +54,7 @@ export default async function ArticlePage({ params }: Props) {
       </Link>
 
       <article className="space-y-8">
-        <header className="space-y-4">
+        <header className="glass-surface rounded-2xl p-6 space-y-4">
           {article.date && (
             <time dateTime={article.date} className="text-sm text-muted-foreground">
               {new Date(article.date).toLocaleDateString("zh-CN", {
@@ -69,10 +70,12 @@ export default async function ArticlePage({ params }: Props) {
           )}
         </header>
 
-        <div
-          className="prose prose-neutral dark:prose-invert max-w-none"
-          dangerouslySetInnerHTML={{ __html: contentHtml }}
-        />
+        <div className="glass-surface rounded-2xl p-6 sm:p-10">
+          <div
+            className="prose prose-neutral dark:prose-invert max-w-none"
+            dangerouslySetInnerHTML={{ __html: contentHtml }}
+          />
+        </div>
       </article>
     </main>
   );

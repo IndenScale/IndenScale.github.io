@@ -30,28 +30,34 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}
       >
         <ThemeProvider>
-          <header className="border-b border-border backdrop-blur-sm bg-background/80 sticky top-0 z-50">
+          <header className="glass-surface glass-edge sticky top-0 z-50">
             <div className="max-w-3xl mx-auto px-6 py-4">
               <nav className="flex items-center justify-between">
-                <a href="/" className="text-xl font-bold tracking-tight hover:text-primary transition-colors">
+                <a href="/" className="text-xl font-bold tracking-tight hover:text-muted-foreground transition-colors">
                   IndenScale
                 </a>
-                <div className="flex items-center gap-5">
-                  <div className="hidden sm:flex items-center gap-5 text-sm text-muted-foreground">
-                    <a href="/bim" className="hover:text-foreground transition-colors">BIM</a>
-                    <a href="/ops" className="hover:text-foreground transition-colors">运营工业化</a>
-                    <a href="/architecture" className="hover:text-foreground transition-colors">架构</a>
-                    <a href="/projects" className="hover:text-foreground transition-colors">项目</a>
+                <div className="flex items-center gap-0">
+                  <div className="hidden sm:flex items-center text-sm text-muted-foreground">
+                    <a href="/bim" className="px-4 py-2 hover:text-foreground hover:bg-muted/60 rounded-md transition-all">BIM</a>
+                    <span className="w-px h-4 bg-neutral-300 dark:bg-neutral-500" />
+                    <a href="/ops" className="px-4 py-2 hover:text-foreground hover:bg-muted/60 rounded-md transition-all">运营工业化</a>
+                    <span className="w-px h-4 bg-neutral-300 dark:bg-neutral-500" />
+                    <a href="/architecture" className="px-4 py-2 hover:text-foreground hover:bg-muted/60 rounded-md transition-all">架构</a>
+                    <span className="w-px h-4 bg-neutral-300 dark:bg-neutral-500" />
+                    <a href="/projects" className="px-4 py-2 hover:text-foreground hover:bg-muted/60 rounded-md transition-all">项目</a>
+                    <span className="w-px h-4 bg-neutral-300 dark:bg-neutral-500" />
                     <a
                       href="https://github.com/IndenScale"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:text-foreground transition-colors"
+                      className="px-4 py-2 hover:text-foreground hover:bg-muted/60 rounded-md transition-all"
                     >
                       GitHub
                     </a>
                   </div>
-                  <ThemeToggle />
+                  <div className="ml-4">
+                    <ThemeToggle />
+                  </div>
                 </div>
               </nav>
             </div>

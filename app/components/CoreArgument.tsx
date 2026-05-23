@@ -29,9 +29,10 @@ export function CoreArgument() {
           <span className="font-semibold">"让 Agent 能放心地跑在生产环境"</span>。
         </p>
         <p className="text-sm text-muted-foreground mt-2 leading-relaxed">
-          Hooks 是强制执行的约束，其他一切只是善意的建议。
-          AGENTS.md、Skills、Sub-agent——这些都只是提示模型的手段；
-          只有 Hooks 是确定性的。
+          Hooks 是强制执行的约束，其他一切只是善意的建议。但 Hooks 只回答"什么不安全"
+          —— Agent 工程的下一个问题是
+          <a href="/ops/08-agent-engineering" className="underline underline-offset-2 hover:text-foreground transition-colors">"什么是对的"</a>，
+          以及谁来决定。
         </p>
       </div>
 

@@ -15,6 +15,7 @@ const sections = [
   { slug: 'ops', title: '运营工业化', desc: '企业现实与 Agent 工程的接口' },
   { slug: 'architecture', title: 'Agent 架构', desc: 'Harness 的控制切面' },
   { slug: 'projects', title: '项目', desc: '问题 → 分析 → 方案 → 效果' },
+  { slug: 'research', title: 'Research', desc: 'RL · 对齐 · 形式化验证' },
 ] as const;
 
 // Extract code snippet at build time from the toolchain article

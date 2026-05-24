@@ -13,7 +13,7 @@ export interface Article {
 }
 
 const contentDir = path.join(process.cwd(), 'content');
-const sections = ['bim', 'ops', 'architecture', 'projects'];
+const sections = ['bim', 'ops', 'architecture', 'projects', 'research'];
 
 export function getSectionTitle(section: string): string {
   const titles: Record<string, string> = {
@@ -21,6 +21,7 @@ export function getSectionTitle(section: string): string {
     ops: '运营工业化',
     architecture: 'Agent 架构',
     projects: '项目',
+    research: 'Research',
   };
   return titles[section] || section;
 }

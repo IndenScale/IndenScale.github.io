@@ -11,3 +11,5 @@ date: "2026-05-21"
 策略四层梯度（Validator → Assertion → 结构化评估 → HITL）是运营工业化与 Agent 架构之间的接口——它定义了"合格"如何从人类判断迁移到机器执行，以及 Agent 和人类之间的控制权分配。
 
 > [Agent 工程：从流程模拟到系统运营](./08-agent-engineering.md) —— OpStack 与 Agent Harness Engineering 之间的桥梁：四个关键决策、未闭环的治理环节、以及为什么治理基础设施是 Agent 下一阶段的核心瓶颈。
+
+> [从沙盒走向 IWE](./09-iwe.md) —— OPS 的施工图纸。IWE（集成工作环境）是一个领域专用的 Agent 沙盒——注入框架、策略、材料和工具，Agent 在里面迭代直至满足 DoD。沙盒是防守，IWE 是进攻。

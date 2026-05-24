@@ -2,9 +2,14 @@
 title: "从沙盒走向 IWE"
 description: "沙盒把 Agent 隔离起来不造成破坏。IWE 把 Agent 武装起来做对的事。前者是防守，后者是进攻。"
 date: "2026-05-24"
+aliases:
+  - /ops/09-iwe/
+  - /ops/iwe/
 ---
 
 # 从沙盒走向 IWE
+
+> **跨层连接器。** 上游概念：[知识层 (knowledge/)](../knowledge/) 的框架/策略/事实/设计，[运行时层 (architecture/)](../architecture/) 的 Hooks/Flag 控制切面。下游作用于：[演化层 — Jargon RL](jargon-rl/) 的模型学习阶段训练数据来源。IWE 是知识资产从静态定义变为 Agent 可消费工作环境的部署格式。
 
 ## 沙盒已经不够了
 

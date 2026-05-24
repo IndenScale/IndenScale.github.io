@@ -3,7 +3,11 @@ title: "Jargon RL：通过共同演化的领域验证器弥合验证鸿沟"
 date: "2026-05-24"
 description: "将验证器套件本身变为与模型共同演化之物——以施工计划验证语言 CPML 为例的元对齐范式。"
 tags: ["RL", "RLVR", "对齐", "验证器", "DSL", "CPML", "pydantic"]
+aliases:
+  - /research/jargon-rl/
 ---
+
+> **跨层连接器。** 上游概念：[知识层 (knowledge/)](../knowledge/) 的框架/策略/事实三层结构，[部署层 — IWE](iwe/) 的运行时失败日志。下游作用于：[部署层 — IWE](iwe/) 的策略层生长机制，[领域层 (domains/)](../domains/) 的 CPML 验证器套件演化。Jargon RL 是知识资产的演化引擎——它回答"验证器套件如何与模型在同一回路中共同进化"。
 
 ## 摘要
 

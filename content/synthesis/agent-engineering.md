@@ -1,7 +1,16 @@
+---
+title: "Agent 工程：从流程模拟到系统运营"
+description: "OpStack 与 Agent Harness Engineering 之间的桥梁：四个关键决策、未闭环的治理环节，以及为什么治理基础设施是 Agent 下一阶段的核心瓶颈。"
+date: "2026-05-24"
+aliases:
+  - /ops/08-agent-engineering/
+  - /ops/agent-engineering/
+---
+
 # Agent 工程：从流程模拟到系统运营
 
-> *当我们设计一个可以运营的 Agent 时，我们需要什么？本文讨论 Agent Harness Engineering 的当前基线、它与 OpStack 之间的联系，以及尚未闭环的环节。*
->
+> **跨层连接器。** 上游概念：[知识层 (knowledge/)](../knowledge/) 的框架/策略/事实/设计四类资产 + 策略四层梯度。下游作用于：[运行时层 (architecture/)](../architecture/) 的 Hooks/Flag 控制机制。本文讨论知识层的设计决策如何映射为 Agent 架构的工程约束。
+
 > *声明：OpStack 是一张地图——它告诉你你在哪里、你看不见什么、你在什么地方做了妥协。它不是施工图纸。*
 
 ---

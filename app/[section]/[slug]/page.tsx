@@ -9,7 +9,7 @@ interface Props {
   params: Promise<{ section: string; slug: string }>;
 }
 
-const validSections = ['bim', 'ops', 'architecture', 'projects', 'research'];
+const validSections = ['bim', 'ops', 'architecture', 'projects', 'research', 'domains'];
 
 export async function generateStaticParams() {
   const params: { section: string; slug: string }[] = [];

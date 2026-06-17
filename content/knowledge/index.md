@@ -18,3 +18,5 @@ aliases:
 > [Agent 工程桥](../synthesis/agent-engineering/) —— 知识层与运行时层之间的桥梁：四个关键决策、未闭环的治理环节、以及为什么治理基础设施是 Agent 下一阶段的核心瓶颈。（原 OPS 第 8 篇，现独立为跨层连接器。）
 
 > [从沙盒走向 IWE](../synthesis/iwe/) —— 知识层的部署格式。IWE（集成工作环境）是一个领域专用的 Agent 沙盒——注入框架、策略、材料和工具，Agent 在里面迭代直至满足 DoD。沙盒是防守，IWE 是进攻。（原 OPS 第 9 篇，现独立为跨层连接器。）
+
+> [ITA：从流程驱动到判断驱动](08-ita-framework.md) —— 一个面向运营自动化与业务流程重构的元方法论框架。核心主张：任何运营任务可以被解构为 I（Important，测什么）+ T（True，事实从哪来）+ A（Acceptable，什么叫合格）三个元问题的回答。不定义 Process，定义 DoA。

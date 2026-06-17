@@ -1,5 +1,5 @@
 ---
-title: "EaC 第四卷：工程基础设施——EPM与AssemblyHub，让原子开始流通"
+title: "Engineering as Code 第四卷：工程基础设施——EPM与AssemblyHub，让原子开始流通"
 date: "2026-06-17"
 description: "ADL定义语言，EPM让Part和规则成为可流通的数字资产，AssemblyHub提供Git式的安全协作平台——工程领域的社会技术基础设施。"
 tags: ["EaC", "EPM", "AssemblyHub", "基础设施", "协作平台"]

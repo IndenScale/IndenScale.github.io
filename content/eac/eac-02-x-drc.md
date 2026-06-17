@@ -1,5 +1,5 @@
 ---
-title: "EaC 第二卷：从事后验尸到原生免疫——为什么X-DRC是唯一的出路？"
+title: "Engineering as Code 第二卷：从事后验尸到原生免疫——为什么X-DRC是唯一的出路？"
 date: "2026-06-17"
 description: "在实现Engineering as Code的进程中，首要且关键的一步是在上游将合规性规则前移嵌入设计生成过程，建立可执行、可豁免、可演进的X-DRC机制。"
 tags: ["EaC", "X-DRC", "合规检查", "质量左移", "原生免疫"]

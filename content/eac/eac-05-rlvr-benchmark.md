@@ -1,5 +1,5 @@
 ---
-title: "Engineering RLVR：可验证奖励如何驱动工程 AI"
+title: "Engineering as Code 第五卷：Engineering RLVR——可验证奖励如何驱动工程 AI"
 date: "2026-06-17"
 description: "Game → Math → Code → HWE。硬件工程是RLVR的下一个主战场。SD-HWE-Bench定义了首个结构化工程设计基准，让AI在工程领域学会创造。"
 tags: ["EaC", "RLVR", "Benchmark", "AI", "SD-HWE-Bench"]

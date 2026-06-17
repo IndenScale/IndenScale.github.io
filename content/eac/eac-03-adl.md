@@ -1,5 +1,5 @@
 ---
-title: "EaC 第三卷：工程的世界语——BIM的未竟之路与ADL的新约"
+title: "Engineering as Code 第三卷：工程的世界语——BIM的未竟之路与ADL的新约"
 date: "2026-06-17"
 description: "BIM曾被誉为工程数字化的世界语，却陷入巴别塔困境。ADL以Part为原子、以PDL/PML/PLL为语法，是对BIM的范式超越。"
 tags: ["EaC", "ADL", "BIM", "IFC", "工程设计语言"]

@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { ThemeProvider } from "./components/ThemeProvider";
 import { ThemeToggle } from "./components/ThemeToggle";
+import { WeChatQRCode } from "./components/WeChatQRCode";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,6 +28,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="zh-CN" suppressHydrationWarning>
+      {/* Umami Analytics - 隐私友好的访问统计，不收集个人数据，无需cookie */}
+      {/* 部署后将 script-url 和 website-id 替换为你自己的 Umami 实例 */}
+      {process.env.NEXT_PUBLIC_UMAMI_SCRIPT_URL && process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID && (
+        <Script
+          src={process.env.NEXT_PUBLIC_UMAMI_SCRIPT_URL}
+          data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID}
+          strategy="afterInteractive"
+          defer
+        />
+      )}
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}
       >
@@ -64,8 +76,23 @@ export default function RootLayout({
           </header>
           {children}
           <footer className="border-t border-border mt-20">
-            <div className="max-w-3xl mx-auto px-6 py-8 text-sm text-muted-foreground text-center">
-              © 2026 宋涤非 (IndenScale)
+            <div className="max-w-3xl mx-auto px-6 py-8">
+              <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p className="text-sm text-muted-foreground">
+                  © 2026 宋涤非 (IndenScale)
+                </p>
+                <div className="flex items-center gap-6">
+                  <WeChatQRCode />
+                  <a
+                    href="https://github.com/IndenScale"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    GitHub
+                  </a>
+                </div>
+              </div>
             </div>
           </footer>
         </ThemeProvider>

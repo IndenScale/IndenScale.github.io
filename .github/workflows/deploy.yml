@@ -32,6 +32,9 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          NEXT_PUBLIC_UMAMI_SCRIPT_URL: https://cloud.umami.is/script.js
+          NEXT_PUBLIC_UMAMI_WEBSITE_ID: dccc61a3-3796-4de2-9fce-629134aa1572
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

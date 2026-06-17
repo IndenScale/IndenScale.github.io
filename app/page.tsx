@@ -11,7 +11,7 @@ import { CoreArgument } from "./components/CoreArgument";
 import { ArrowRight, FileText } from "lucide-react";
 
 const sections = [
-  { slug: 'bim', title: 'Make BIM Great Again', desc: '施工管理的计算化' },
+  { slug: 'eac', title: 'Engineering as Code', desc: '工程设计的形式化与可计算基础' },
   { slug: 'ops', title: '运营工业化', desc: '企业现实与 Agent 工程的接口' },
   { slug: 'architecture', title: 'Agent 架构', desc: 'Harness 的控制切面' },
   { slug: 'projects', title: '项目', desc: '问题 → 分析 → 方案 → 效果' },

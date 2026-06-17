@@ -38,7 +38,7 @@ export default function RootLayout({
                 </a>
                 <div className="flex items-center gap-0">
                   <div className="hidden sm:flex items-center text-sm text-muted-foreground">
-                    <a href="/bim" className="px-4 py-2 hover:text-foreground hover:bg-muted/60 rounded-md transition-all">BIM</a>
+                    <a href="/eac" className="px-4 py-2 hover:text-foreground hover:bg-muted/60 rounded-md transition-all">EaC</a>
                     <span className="w-px h-4 bg-neutral-300 dark:bg-neutral-500" />
                     <a href="/ops" className="px-4 py-2 hover:text-foreground hover:bg-muted/60 rounded-md transition-all">运营工业化</a>
                     <span className="w-px h-4 bg-neutral-300 dark:bg-neutral-500" />

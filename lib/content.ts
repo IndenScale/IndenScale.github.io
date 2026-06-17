@@ -13,11 +13,11 @@ export interface Article {
 }
 
 const contentDir = path.join(process.cwd(), 'content');
-const sections = ['bim', 'ops', 'architecture', 'projects', 'research', 'domains'];
+const sections = ['eac', 'ops', 'architecture', 'projects', 'research', 'domains'];
 
 export function getSectionTitle(section: string): string {
   const titles: Record<string, string> = {
-    bim: 'Make BIM Great Again',
+    eac: 'Engineering as Code',
     ops: '运营工业化',
     architecture: 'Agent 架构',
     projects: '项目',

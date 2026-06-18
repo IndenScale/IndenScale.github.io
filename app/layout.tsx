@@ -52,11 +52,11 @@ export default function RootLayout({
                   <div className="hidden sm:flex items-center text-sm text-muted-foreground">
                     <a href="/eac" className="px-4 py-2 hover:text-foreground hover:bg-muted/60 rounded-md transition-all">EaC</a>
                     <span className="w-px h-4 bg-neutral-300 dark:bg-neutral-500" />
-                    <a href="/ops" className="px-4 py-2 hover:text-foreground hover:bg-muted/60 rounded-md transition-all">运营工业化</a>
+                    <a href="/knowledge" className="px-4 py-2 hover:text-foreground hover:bg-muted/60 rounded-md transition-all">运营工业化</a>
                     <span className="w-px h-4 bg-neutral-300 dark:bg-neutral-500" />
                     <a href="/architecture" className="px-4 py-2 hover:text-foreground hover:bg-muted/60 rounded-md transition-all">架构</a>
                     <span className="w-px h-4 bg-neutral-300 dark:bg-neutral-500" />
-                    <a href="/projects" className="px-4 py-2 hover:text-foreground hover:bg-muted/60 rounded-md transition-all">项目</a>
+                    <a href="/tools" className="px-4 py-2 hover:text-foreground hover:bg-muted/60 rounded-md transition-all">工具</a>
                     <span className="w-px h-4 bg-neutral-300 dark:bg-neutral-500" />
                     <a
                       href="https://github.com/IndenScale"

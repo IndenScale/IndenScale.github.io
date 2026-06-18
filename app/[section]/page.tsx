@@ -8,7 +8,7 @@ interface Props {
   params: Promise<{ section: string }>;
 }
 
-const validSections = ['eac', 'ops', 'architecture', 'projects', 'research', 'domains'];
+const validSections = ['eac', 'architecture', 'knowledge', 'synthesis', 'tools', 'domains'];
 
 export async function generateStaticParams() {
   return validSections.map(section => ({ section }));

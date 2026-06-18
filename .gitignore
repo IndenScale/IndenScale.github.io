@@ -44,3 +44,6 @@ next-env.d.ts
 /.references/
 references/
 dist/
+
+# temporary concatenated files
+**/.tmp

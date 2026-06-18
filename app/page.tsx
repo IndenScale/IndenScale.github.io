@@ -12,14 +12,14 @@ import { ArrowRight, FileText } from "lucide-react";
 
 const sections = [
   { slug: 'eac', title: 'Engineering as Code', desc: '工程设计的形式化与可计算基础' },
-  { slug: 'ops', title: '运营工业化', desc: '企业现实与 Agent 工程的接口' },
+  { slug: 'knowledge', title: '运营工业化', desc: '企业现实与 Agent 工程的接口' },
   { slug: 'architecture', title: 'Agent 架构', desc: 'Harness 的控制切面' },
-  { slug: 'projects', title: '项目', desc: '问题 → 分析 → 方案 → 效果' },
-  { slug: 'research', title: 'Research', desc: 'RL · 对齐 · 形式化验证' },
+  { slug: 'tools', title: '工具', desc: '问题 → 分析 → 方案 → 效果' },
+  { slug: 'synthesis', title: '跨层研究', desc: 'RL · 对齐 · 形式化验证' },
 ] as const;
 
 // Extract code snippet at build time from the toolchain article
-const codeBlock = extractFirstCodeBlock('ops', '05-toolchain', 'python', 12);
+const codeBlock = extractFirstCodeBlock('knowledge', '05-toolchain', 'python', 12);
 
 export default function Home() {
   const recent = getRecentArticles(6);
@@ -127,7 +127,7 @@ export default function Home() {
                       <div className="min-w-0 flex-1">
                         <div className="flex items-center gap-3 text-xs text-muted-foreground mb-1">
                           <span className="font-medium text-foreground">
-                            {sections.find(s => s.slug === article.section)?.title}
+                            {sections.find(s => s.slug === article.section)?.title || article.section}
                           </span>
                           {article.date && (
                             <time dateTime={article.date}>

@@ -13,15 +13,15 @@ export interface Article {
 }
 
 const contentDir = path.join(process.cwd(), 'content');
-const sections = ['eac', 'ops', 'architecture', 'projects', 'research', 'domains'];
+const sections = ['eac', 'architecture', 'knowledge', 'synthesis', 'tools', 'domains'];
 
 export function getSectionTitle(section: string): string {
   const titles: Record<string, string> = {
     eac: 'Engineering as Code',
-    ops: '运营工业化',
     architecture: 'Agent 架构',
-    projects: '项目',
-    research: 'Research',
+    knowledge: '运营工业化',
+    synthesis: '跨层研究',
+    tools: '工具',
     domains: '领域实例',
   };
   return titles[section] || section;
@@ -36,8 +36,27 @@ export function getArticles(section: string): Article[] {
   const dir = path.join(contentDir, section);
   if (!fs.existsSync(dir)) return [];
 
-  return fs.readdirSync(dir)
-    .filter(f => f.endsWith('.md') && f !== 'index.md')
+  const entries = fs.readdirSync(dir, { withFileTypes: true });
+  const files: string[] = [];
+
+  for (const entry of entries) {
+    if (entry.isFile() && entry.name.endsWith('.md') && entry.name !== 'index.md') {
+      files.push(entry.name);
+    } else if (entry.isDirectory()) {
+      // Recurse into subdirectories (e.g. domains/Engineering  as Code/)
+      const subdir = path.join(dir, entry.name);
+      if (fs.existsSync(subdir)) {
+        const subEntries = fs.readdirSync(subdir);
+        for (const subEntry of subEntries) {
+          if (subEntry.endsWith('.md') && subEntry !== 'index.md') {
+            files.push(path.join(entry.name, subEntry));
+          }
+        }
+      }
+    }
+  }
+
+  return files
     .map(fileName => {
       const slug = fileName.replace(/\.md$/, '');
       const fullPath = path.join(dir, fileName);
@@ -61,19 +80,35 @@ export function getArticles(section: string): Article[] {
 
 export function getArticle(section: string, slug: string): Article | null {
   const fullPath = path.join(contentDir, section, `${slug}.md`);
-  if (!fs.existsSync(fullPath)) return null;
-
-  const raw = fs.readFileSync(fullPath, 'utf8');
-  const { data, content } = matter(raw);
-  return {
-    slug,
-    title: data.title || extractTitle(content) || slug,
-    date: data.date || '',
-    description: data.description || '',
-    tags: data.tags || [],
-    content,
-    section,
-  };
+  if (fs.existsSync(fullPath)) {
+    const raw = fs.readFileSync(fullPath, 'utf8');
+    const { data, content } = matter(raw);
+    return {
+      slug,
+      title: data.title || extractTitle(content) || slug,
+      date: data.date || '',
+      description: data.description || '',
+      tags: data.tags || [],
+      content,
+      section,
+    };
+  }
+  // Try nested path for domains/
+  const nestedPath = path.join(contentDir, section, `${slug}.md`);
+  if (fs.existsSync(nestedPath)) {
+    const raw = fs.readFileSync(nestedPath, 'utf8');
+    const { data, content } = matter(raw);
+    return {
+      slug,
+      title: data.title || extractTitle(content) || slug,
+      date: data.date || '',
+      description: data.description || '',
+      tags: data.tags || [],
+      content,
+      section,
+    };
+  }
+  return null;
 }
 
 export function getSectionIndex(section: string): Article | null {

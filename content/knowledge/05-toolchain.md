@@ -1,3 +1,9 @@
+---
+title: "工具链参考"
+date: "2026-05-21"
+description: "OpStack 框架的推荐实现映射——Jinja2 模板、Pydantic 模型、飞书多维表格、CI 编排"
+---
+
 # 工具链参考
 
 ## 0. 说明

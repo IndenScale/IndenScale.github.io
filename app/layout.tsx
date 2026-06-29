@@ -1,24 +1,29 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import { ThemeProvider } from "./components/ThemeProvider";
 import { ThemeToggle } from "./components/ThemeToggle";
 import { WeChatQRCode } from "./components/WeChatQRCode";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const interSans = Inter({
   subsets: ["latin"],
+  variable: "--font-geist-sans",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
+  variable: "--font-geist-mono",
 });
 
 export const metadata: Metadata = {
   title: "宋涤非 | IndenScale",
   description: "Agent 架构、运营工业化、施工管理计算化。记录思考与实践。",
+  alternates: {
+    types: {
+      'application/rss+xml': '/feed.xml',
+    },
+  },
 };
 
 export default function RootLayout({
@@ -39,7 +44,7 @@ export default function RootLayout({
         />
       )}
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}
+        className={`${interSans.variable} ${jetbrainsMono.variable} antialiased min-h-screen`}
       >
         <ThemeProvider>
           <header className="glass-surface glass-edge sticky top-0 z-50">

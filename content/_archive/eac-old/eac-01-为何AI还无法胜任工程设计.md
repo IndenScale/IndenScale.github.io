@@ -1,5 +1,5 @@
 ---
-title: "Engineering as Code 第一卷：Circuit as Code 的缺失——为何AI还无法胜任工程设计？"
+title: "Engineering as Code 第一卷：为何AI还无法胜任工程设计？"
 date: "2026-06-17"
 description: "一场关于大模型能力边界的深度思辨——从物理直觉缺失到质量左移断层，为什么AI在芯片设计中如鱼得水，却在建筑、机械等传统工程领域举步维艰。"
 tags: ["EaC", "AI", "工程设计", "Circuit as Code", "质量左移"]

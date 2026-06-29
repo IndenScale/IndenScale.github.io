@@ -144,7 +144,7 @@ EaC 将软件工程的方法论搬进工程设计，在 IDC 机房扩容场景�
 - **如果你在构建 Agent 系统**，关心怎么让 Agent 不出错 → 从 [运行时层](architecture/) 开始，先看 [三层控制回路](architecture/00-three-layer-framework/)
 - **如果你在做强化学习/对齐**，关心奖励信号的设计 → 从 [Jargon RL](synthesis/jargon-rl/) 开始
 - **如果你做 BIM/施工管理**，关心计划和现实的偏差 → 从 [CPML](domains/cpml/) 开始
-- **如果你做通信/数据中心工程设计**，关心多专业协同和设计一致性 → 从 [Engineering as Code](domains/eac/) 开始
+- **如果你做通信/数据中心工程设计**，关心多专业协同和设计一致性 → 从 [Engineering as Code](eac/) 开始
 - **如果你只是想知道这整套东西的来龙去脉** → 按顺序：知识层 → 运行时层 → 部署层 → 演化层
 
 ---
